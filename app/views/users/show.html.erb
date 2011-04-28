@@ -1,0 +1,42 @@
+<h1>ユーザ</h1>
+<h2>ユーザ詳細</h2>
+<table class="attributes">
+  <tr>
+    <td>ユーザID</td>
+    <td><%= h @user.user_id %></td>
+  </tr>
+  <tr>
+    <td>名前</td>
+    <td><%= h @user.name %></td>
+  </tr>
+  <tr>
+    <td>所属部署</td>
+    <td><%= h @user.host %></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><%= h @user.email %></td>
+  </tr>
+  <tr>
+    <td>ユーザタイプ</td>
+    <td><%= h @user.usertype == 'admin' ? "管理者" : "一般"%></td>
+  </tr>
+	<tr>
+	  <td>サマリー通知</td>
+    <td><%= @user.summary_mail? ? '有り' : '無し' %></td>
+	</tr>
+  <tr>
+    <td>管理プロジェクト</td>
+    <td>
+      <% @sites.each_with_index do |site, i| %>
+        <%= h i+1 %>. <%= h site.site_name %><br />
+      <% end %>
+  	</td>
+  </tr>
+  <tr>
+    <td>備考</td>
+    <td><%= simple_format @user.note %></td>
+  </tr>
+</table>
+
+<%= link_to 'ユーザ一覧に戻る', :users %>

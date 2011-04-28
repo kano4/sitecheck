@@ -1,0 +1,19 @@
+<h1>サイト担当者</h1>
+<table class="attributes">
+  <tr>
+    <th>サイト名</th>
+    <td><%= h @site.site_name %></td>
+  </tr>
+  <tr>
+    <th>担当者</th>
+    <td>
+      <% @users.each do |user| %>
+        <%= h user.name %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<div class="buttonGroup">
+  <%= link_to '戻る', :action => :index %>
+</div>

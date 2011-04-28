@@ -1,0 +1,59 @@
+<h1>グループ</h1>
+
+<p id="btn-create" class="box"><%= link_to '<span>新規グループの追加</span>', [ :new, :group ] %></p>
+
+<table id="table" class="sortable">
+<thead>
+	<tr>
+		<th><h3>グループ名</h3></th>
+		<th class="nosort"><h3>詳細</h3></th>
+		<th class="nosort"><h3>編集</h3></th>
+		<th class="nosort"><h3>削除</h3></th>
+	</tr>
+</thead>
+<tbody>
+  <% @groups.each do |group| %>
+    <% content_tag(:tr) do %>
+      <%= content_tag :td, h(group.name) %>
+      <%= content_tag :td, link_to('詳細', group) %>
+      <%= content_tag :td, link_to('編集', [ :edit, group]) %>
+	    <%= content_tag :td, link_to('削除', group, :method => :delete, :confirm => '本当に削除しますか？') %>
+    <% end %>
+  <% end %>
+</tbody>
+</table>
+
+<div id="controls">
+	<div id="perpage">
+		<select onchange="sorter.size(this.value)">
+		<option value="5">5</option>
+			<option value="10" selected="selected">10</option>
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select>
+		<span>ページあたりの件数</span>
+	</div>
+	<div id="navigation">
+		<%= link_to_function(image_tag("tinytable_img/first.gif", :alt => "先頭ページ"), "sorter.move(-1,true)") %>
+		<%= link_to_function(image_tag("tinytable_img/previous.gif", :alt => "前のページ"), "sorter.move(-1)") %>
+		<%= link_to_function(image_tag("tinytable_img/next.gif", :alt => "次のページ"), "sorter.move(1)") %>
+		<%= link_to_function(image_tag("tinytable_img/last.gif", :alt => "最終ページ"), "sorter.move(1,true)") %>
+	</div>
+	<div id="text"><span id="pagelimit"></span>ページ中 <span id="currentpage"></span>ページ目を表示</div>
+</div>
+
+<script type="text/javascript">
+	var sorter = new TINY.table.sorter("sorter");
+	sorter.head = "head";
+	sorter.asc = "asc";
+	sorter.desc = "desc";
+	sorter.even = "evenrow";
+	sorter.odd = "oddrow";
+	sorter.evensel = "evenselected";
+	sorter.oddsel = "oddselected";
+	sorter.paginate = true;
+	sorter.currentid = "currentpage";
+	sorter.limitid = "pagelimit";
+	sorter.init("table",0);
+</script>

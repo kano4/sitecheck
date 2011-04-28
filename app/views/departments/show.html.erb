@@ -1,0 +1,15 @@
+<h1>部署</h1>
+<h2>部署詳細</h2>
+
+<table class="detail">
+  <tr>
+    <td>部署名</td>
+    <td><%= h @department.name %></td>
+  </tr>
+  <tr>
+    <td>備考</td>
+    <td><%= simple_format @department.note %></td>
+  </tr>
+</table>
+
+<%= link_to '部署一覧に戻る', :departments %>

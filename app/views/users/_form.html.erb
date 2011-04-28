@@ -1,0 +1,69 @@
+<% form_for @user do |f| %>
+	<%= f.error_messages %>
+	<table class="attributes">
+	  <tr>
+	    <td>User ID</td>
+	    <td><%= f.text_field :user_id %></td>
+	  </tr>
+	  <tr>
+	    <td>名前</td>
+	    <td><%= f.text_field :name %></td>
+	  </tr>
+	<% if controller.action_name != 'edit' && controller.action_name != 'update'  %>
+		<tr>
+			<td>パスワード</td>
+			<td><%= f.password_field :password %></td>
+		</tr>
+		<tr>
+			<td>パスワード(確認)</td>
+			<td><%= f.password_field :password_confirmation %></td>
+		</tr>
+	<% end %>
+	  <tr>
+	    <td>Email</td>
+	    <td><%= f.text_field :email %></td>
+	  </tr>
+	  <tr>
+	    <td>所属部署</td>
+	    <td>
+      	<%= f.select(:host, Department.find(:all).map{|g| [g.name]}) %>
+	    </td>
+	  </tr>
+	<% if current_user.usertype == 'admin' %>
+	  <tr>
+	    <td>権限</td>
+	    <td>
+	      <%= f.radio_button :usertype, 'normal' %>一般
+	      <%= f.radio_button :usertype, 'admin' %>管理者
+	    </td>
+	  </tr>
+	<% end %>
+	  <tr>
+	    <td>サマリー通知</td>
+	    <td>
+      	<%= f.radio_button :summary_mail, false%>無し
+     		<%= f.radio_button :summary_mail, true %>有り
+	    </td>
+	  </tr>
+	<% if @sites != nil %>
+	  <tr>
+	    <td>サイト一覧</td>
+	    <td>
+	      <% @sites.each do |site| %>
+	        <%= check_box_tag("sites[]", site.id, (true if @site_ids.include?(site.id)) ) %>
+	        <%= h site.site_name %><br />
+	      <% end %>
+	    </td>
+	  </tr>
+	<% end %>
+	  <tr>
+	    <td>備考</td>
+	    <td><%= f.text_area :note, :size => '40x5' %></td>
+	  </tr>
+	</table>
+	
+	
+	<div class="submit">
+	  <%= f.submit f.object.new_record? ? '追加' : '保存' %>
+	</div>
+<% end %>

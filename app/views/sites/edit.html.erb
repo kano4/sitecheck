@@ -1,0 +1,9 @@
+<h1>監視サイト</h1>
+
+<% form_for [ :confirm, @site ] do |f| %>
+<%= f.error_messages %>
+<fieldset>
+	<legend>サイト編集</legend>
+		<%= render :partial => 'form', :locals => { :f => f } %>
+</fieldset>
+<% end %>

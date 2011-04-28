@@ -1,0 +1,16 @@
+<h1>全サイトに対してテストを実行するためのページ</h1>
+
+<table class="list">
+  <tr>
+    <th>サイト名</th>
+    <th>URL</th>
+    <th>最終データ取得日</th>
+  <% @sites.each_with_index do |site, i| %>
+    <% content_tag(:tr, :class => i.even? ? 'even' : 'odd') do %>
+      <%= content_tag :td, h(site.site_name) %>
+      <%= content_tag :td, h(site.site_url) %>
+      <%= content_tag :td, site.last_check.to_s %>
+    <% end %>
+  <% end %>
+</table>
+

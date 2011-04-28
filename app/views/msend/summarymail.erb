@@ -1,0 +1,13 @@
+<ドメイン期限30日以内>
+<% @domain_sites.each_with_index do |site,i| %>
+<%= h i+1 %>.<%= h site.site_name %>
+  <%= h site.domain_name %>
+  <%= h site.domain_deadline.strftime("%Y/%m/%d") %> (あと<%= h (site.domain_deadline - Date.today).to_i %>日)
+<% end %>
+
+<SSL期限30日以内>
+<% @ssl_sites.each_with_index do |site,i| %>
+<%= h i+1 %>.<%= h site.site_name %>
+  <%= h site.ssl_check_name %>
+  <%= h site.ssl_deadline.strftime("%Y/%m/%d") %> (あと<%= h (site.ssl_deadline - Date.today).to_i %>日)
+<% end %>

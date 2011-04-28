@@ -1,0 +1,419 @@
+--------------------------
+START: Fri Oct 08 20:21:20 +0900 2010
+PID: 4864
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 08 20:21:59 +0900 2010
+id  = 21578242
+url = http://www.ihinseiri-help.com/
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images//21578242.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 08 20:22:48 +0900 2010
+PID: 4961
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 08 20:23:12 +0900 2010
+id  = 21578242
+url = http://www.ihinseiri-help.com/rule.html
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images//21578242.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 08 20:24:10 +0900 2010
+PID: 5046
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 08 20:25:04 +0900 2010
+id  = 21578242
+url = http://www.ihinseiri-help.com/
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images//21578242.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 08 20:26:51 +0900 2010
+PID: 5140
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 08 20:28:17 +0900 2010
+id  = 21578242
+url = http://www.ihinseiri-help.com/rule.html
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/21578242.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 08 20:29:08 +0900 2010
+PID: 5236
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 08 20:29:45 +0900 2010
+id  = 21578242
+url = http://www.ihinseiri-help.com/
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/21578242.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 08 20:31:06 +0900 2010
+PID: 5349
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 08 20:32:13 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+--------------------------
+START: Fri Oct 08 20:36:36 +0900 2010
+PID: 5499
+END FireFox
+END Xvfb
+START Xvfb
+START FireFox
+SIGNAL TERM
+END Xvfb
+END FireFox
+SIGNAL TERM
+--------------------------
+START: Fri Oct 08 20:37:07 +0900 2010
+PID: 5556
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 08 20:37:27 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 08 20:37:58 +0900 2010
+id  = 21578242
+url = http://www.ihinseiri-help.com/
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/21578242.png
+--
+display_id:1
+GET MSG: Fri Oct 08 20:46:05 +0900 2010
+id  = 21578242
+url = http://www.ihinseiri-help.com/rule.html
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/21578242.png
+--
+display_id:1
+GET MSG: Fri Oct 08 20:47:30 +0900 2010
+id  = 51848956
+url = http://www.bikemitsumori.jp/
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/51848956.png
+--
+display_id:1
+GET MSG: Fri Oct 08 20:49:28 +0900 2010
+id  = 51848956
+url = http://www.bikemitsumori.jp/terms/kiyaku.html
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/51848956.png
+--
+display_id:1
+GET MSG: Fri Oct 08 20:54:40 +0900 2010
+id  = 1047793134
+url = https://www.gaitamefinest.com/
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/1047793134.png
+--
+display_id:1
+GET MSG: Fri Oct 08 20:56:29 +0900 2010
+id  = 1047793134
+url = https://www.gaitamefinest.com/forms_corporation.php
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/1047793134.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 15 11:00:01 +0900 2010
+PID: 8436
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:07:52 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 15 13:09:00 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 15 13:09:28 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 15 13:11:45 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 15 13:12:50 +0900 2010
+PID: 11004
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:13:15 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:13:52 +0900 2010
+PID: 11083
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:14:04 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+SIGNAL TERM
+--------------------------
+START: Fri Oct 15 13:14:54 +0900 2010
+PID: 11166
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:15:06 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:15:19 +0900 2010
+PID: 11252
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:15:55 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 15 13:16:12 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:18:31 +0900 2010
+PID: 11364
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:18:38 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:23:54 +0900 2010
+PID: 11563
+START Xvfb
+START FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:24:17 +0900 2010
+PID: 11602
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:24:35 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:26:32 +0900 2010
+PID: 11719
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:26:45 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 15 13:26:50 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 15 13:27:40 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:30:06 +0900 2010
+PID: 11876
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:30:14 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:31:17 +0900 2010
+PID: 11949
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:31:28 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:31:58 +0900 2010
+PID: 12026
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:32:03 +0900 2010
+PID: 12030
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:32:13 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:34:09 +0900 2010
+PID: 12189
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:34:18 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+END FireFox
+END Xvfb
+SIGNAL INT
+--------------------------
+START: Fri Oct 15 13:35:11 +0900 2010
+PID: 12276
+START Xvfb
+START FireFox
+display_id:1
+GET MSG: Fri Oct 15 13:35:23 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+display_id:1
+GET MSG: Fri Oct 15 13:36:40 +0900 2010
+id  = 499999
+url = http://www.itokuro.jp
+width  = 1024
+height = 768
+/home/kanou/sitecheck_dev/public/images/499999.png
+--
+SIGNAL TERM

@@ -1,0 +1,417 @@
+one:
+  site_name: 株式会社イトクロ
+  site_url: http://www.itokuro.jp/
+  check_url: http://www.itokuro.jp/documents/pp.html
+  site_status: 運用中
+  domain_name: itokuro.jp
+  domain_deadline: 2011-03-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+two:
+  site_name: 2PM
+  site_url: http://www.2pm.jp/
+  check_url: http://www.2pm.jp/privacy.html
+  site_status: 運用中
+  domain_name: 2pm.jp
+  domain_deadline: 2011-06-30
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+three:
+  site_name: 塾ナビ
+  site_url: http://www.jyukunavi.jp/
+  check_url: http://www.jyukunavi.jp/exemption/
+  site_status: 運用中
+  domain_name: jyukunavi.jp
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+four:
+  site_name: 介護ホーム
+  site_url: http://www.kaigohome.net/
+  check_url: http://www.kaigohome.net/lp/
+  site_status: 運用中
+  domain_name: kaigohome.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+five:
+  site_name: BIKET
+  site_url: http://www.biket.jp/
+  check_url: http://www.biket.jp/terms/menseki/
+  site_status: 運用中
+  domain_name: biket.jp
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+six:
+  site_name: バイク買取一括査定.net
+  site_url: http://www.bikemitsumori.jp/
+  check_url: http://www.bikemitsumori.jp/terms/kiyaku.html
+  site_status: 運用中
+  domain_name: bikemitsumori.jp
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+seven:
+  site_name: 答えてバイク屋さん
+  site_url: http://www.bike83.net/
+  check_url: ""
+  site_status: 運用中
+  domain_name: bike83.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+eight:
+  site_name: 答えてクルマ屋さん
+  site_url: http://www.kuruma83.com/
+  check_url: http://www.kuruma83.com/terms/
+  site_status: 運用中
+  domain_name: kuruma83.com
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+nine:
+  site_name: 検索サイト.net
+  site_url: http://www.kensaku-site.net/
+  check_url: http://www.kensaku-site.net/privacy/
+  site_status: 運用中
+  domain_name: kensaku-site.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+ten:
+  site_name: スピードSEO
+  site_url: http://www.speedseo.net/
+  check_url: http://www.speedseo.net/privacy/
+  site_status: 運用中
+  domain_name: speedseo.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+eleven:
+  site_name: みんなの競馬予想
+  site_url: http://www.mkeiba.jp/
+  check_url: http://www.mkeiba.jp/rules.html
+  site_status: 運用中
+  domain_name: mkeiba.jp
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+twelve:
+  site_name: お助け相続ナビ
+  site_url: http://www.souzokuguide.com/
+  check_url: http://www.souzokuguide.com/kiyaku/
+  site_status: 運用中
+  domain_name: souzokuguide.com
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_html:
+  check_html2:
+
+thirteen:
+  site_name: 遺品整理一括見積もり.com
+  site_url: http://www.ihinseiri-help.com/
+  check_url: http://www.ihinseiri-help.com/rule.html
+  site_status: 運用中
+  domain_name: ihinseiri-help.com
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+fourteen:
+  site_name: 住宅ローン情報ナビ
+  site_url: http://www.j-homeloan.jp/
+  check_url: http://www.j-homeloan.jp/kiyaku/
+  site_status: 運用中
+  domain_name: j-homeloan.jp
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+fifteen:
+  site_name: 保険ライフ
+  site_url: http://www.hoken-life.com/
+  check_url: http://www.hoken-life.com/kiyaku/
+  site_status: 運用中
+  domain_name: hoken-life.com
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+sixteen:
+  site_name: 看護師お仕事カルテ
+  site_url: http://www.kangoshikyujin.jp/
+  check_url: http://www.kangoshikyujin.jp/inquiry/
+  site_status: 運用中
+  domain_name: kangoshikyujin.jp
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+seventeen:
+  site_name: 探偵らくらく浮気調査ナビ
+  site_url: http://www.uwakichousa-tantei.com/
+  check_url: ""
+  site_status: 運用中
+  domain_name: uwakichousa-tantei.com
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+eighteen:
+  site_name: ｻｯｶｰﾏﾆｱ2
+  site_url: http://pf.mbga.jp/12001286
+  check_url: http://lb.nfc.mbga.soccermania2.itokuro.net/public.php?opensocial_owner_id=24875026
+  site_status: 運用中
+  domain_name: itokuro.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+nineteen:
+  site_name: どうぶつ病院.JP
+  site_url: http://www.pethospital.jp/
+  check_url: ""
+  site_status: 運用中
+  domain_name: pethospital.jp
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+twenty:
+  site_name: ﾊﾞｽｹｯﾄﾎﾞｰﾙﾏﾆｱmixi
+  site_url: http://ma.mixi.net/20437/
+  check_url: http://lb.nfc.mixi.basketballmania.itokuro.net/public.php
+  site_status: 運用中
+  domain_name: itokuro.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+twenty-one:
+  site_name: ﾊﾞｽｹｯﾄﾎﾞｰﾙﾏﾆｱmbga
+  site_url: http://pf.mbga.jp/12001079
+  check_url: http://lb.nfc.mbga.basketballmania.itokuro.net/public.php
+  site_status: 運用中
+  domain_name: itokuro.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+
+twenty-two:
+  site_name: ミエル君 - クライアント
+  site_url: http://report.speedseo.net/
+  check_url: http://report.speedseo.net/
+  site_status: 運用中
+  domain_name: speedseo.net
+  domain_deadline: 2010-12-31
+  ssl_valid: false
+  ssl_deadline: 
+  created_date: 2010-09-27 20:00:00
+  updated_date: 2010-09-27 20:00:00
+  last_check: ""
+  manager: 技術
+  group: 社内案件
+  note:
+  check_status:
+  check_html:
+  check_html2:
+

@@ -1,0 +1,10 @@
+<h1>ユーザ</h1>
+
+<% if current_user == @user %>
+	<p id="btn-create" class="box"><%= link_to('<span>パスワード変更</span>', 'chgpass') %></p>
+<% end %>
+
+<fieldset>
+	<legend>ユーザ編集</legend>
+	<%= render :partial => 'form' %>
+</fieldset>

@@ -1,0 +1,80 @@
+<h1>ユーザ</h1>
+
+<% if current_user.usertype == 'admin' %>
+	<p id="btn-create" class="box"><%= link_to '<span>新規ユーザの追加</span>', :action => :new %></p>
+<% end %>
+
+<table id="table" class="sortable">
+<thead>
+  <tr>
+    <th><h3>User ID</h3></th>
+    <th width="100"><h3>名前</h3></th>
+    <th><h3>所属部署</h3></th>
+    <th width="200"><h3>Email</h3></th>
+    <th><h3>権限</h3></th>
+    <th class="nosort"><h3>詳細</h3></th>
+		<% if current_user && current_user.usertype == 'admin' %>
+    <th class="nosort"><h3>編集</h3></th>
+    <th class="nosort"><h3>削除</h3></th>
+		<% end %>
+  </tr>
+</thead>
+<tbody>
+  <% @users.each_with_index do |user, i| %>
+    <% content_tag(:tr, :class => i.even? ? 'even' : 'odd') do %>
+      <%= content_tag :td, h(user.user_id) %>
+      <%= content_tag :td, h(user.name) %>
+      <%= content_tag :td, h(user.host) %>
+      <%= content_tag :td, h(user.email) %>
+			<%= content_tag :td, user.usertype == 'admin' ? "管理者" : "一般" %>
+      <%= content_tag :td, link_to('詳細', user) %>
+
+			<% if current_user.usertype == 'admin' %>
+			<%= content_tag :td, link_to('編集', [ :edit, user ]) %>
+      <%= content_tag :td, link_to('削除', user, :method => :delete,
+        :confirm => '本当に削除しますか？') %>
+			<% elsif current_user == user %>
+			<%= content_tag :td, link_to('編集', [ :edit, user ]) %>
+			<% end %>
+
+    <% end %>
+  <% end %>
+</tbody>
+</table>
+
+<div id="controls">
+	<div id="perpage">
+		<select onchange="sorter.size(this.value)">
+		<option value="5">5</option>
+			<option value="10" selected="selected">10</option>
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select>
+		<span>ページあたりの件数</span>
+	</div>
+	<div id="navigation">
+		<%= link_to_function(image_tag("tinytable_img/first.gif", :alt => "先頭ページ"), "sorter.move(-1,true)") %>
+		<%= link_to_function(image_tag("tinytable_img/previous.gif", :alt => "前のページ"), "sorter.move(-1)") %>
+		<%= link_to_function(image_tag("tinytable_img/next.gif", :alt => "次のページ"), "sorter.move(1)") %>
+		<%= link_to_function(image_tag("tinytable_img/last.gif", :alt => "最終ページ"), "sorter.move(1,true)") %>
+	</div>
+	<div id="text"><span id="pagelimit"></span>ページ中 <span id="currentpage"></span>ページ目を表示</div>
+</div>
+
+
+
+<script type="text/javascript">
+	var sorter = new TINY.table.sorter("sorter");
+	sorter.head = "head";
+	sorter.asc = "asc";
+	sorter.desc = "desc";
+	sorter.even = "evenrow";
+	sorter.odd = "oddrow";
+	sorter.evensel = "evenselected";
+	sorter.oddsel = "oddselected";
+	sorter.paginate = true;
+	sorter.currentid = "currentpage";
+	sorter.limitid = "pagelimit";
+	sorter.init("table",0);
+</script>

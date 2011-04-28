@@ -1,0 +1,15 @@
+one:
+  user_id: MyString
+  name: MyString
+  host: MyString
+  email: MyString
+  note: MyText
+  password: MyString
+
+two:
+  user_id: MyString
+  name: MyString
+  host: MyString
+  email: MyString
+  note: MyText
+  password: MyString

@@ -1,0 +1,68 @@
+<table class="confirm">
+  <tr>
+    <td>サイト名</td>
+    <td><%= h @site.site_name %></td>
+  </tr>
+  <tr>
+    <td>URL（トップページ）</td>
+    <td><%= h @site.site_url %></td>
+  </tr>
+  <tr>
+    <td>URL（チェック先）</td>
+    <td><%= h @site.check_url %></td>
+  </tr>
+  <tr>
+    <td>ステータス</td>
+    <td><%= h @site.site_status %></td>
+  </tr>
+  <tr>
+    <td>ドメイン名</td>
+    <td><%= h @site.domain_name %></td>
+  </tr>
+  <tr>
+    <td>SSL有無</td>
+    <td><%= @site.ssl_valid? ? '有効' : '無効' %></td>
+  </tr>
+  <tr>
+    <td>SSL管理ドメイン名</td>
+    <td><%= h @site.ssl_check_name %></td>
+  </tr>
+  <tr>
+    <td>SSL有効期限</td>
+    <td><%= @site.ssl_deadline? ? @site.ssl_deadline : '' %></td>
+  </tr>
+  <tr>
+    <td>登録日</td>
+    <td><%= @site.created_date.to_s %></td>
+  </tr>
+  <tr>
+    <td>更新日</td>
+    <td><%= @site.updated_date.to_s %></td>
+  </tr>
+  <tr>
+    <td>最終データ取得日</td>
+    <td><%= @site.last_check.to_s %></td>
+  </tr>
+  <tr>
+    <td>管理部署</td>
+    <td><%= h @site.manager %></td>
+  </tr>
+  <tr>
+    <td>グループ</td>
+    <td><%= h @site.group %></td>
+  </tr>
+<% if @users != nil %>
+  <tr>
+    <td>担当ユーザ</td>
+    <td>
+      <% @users.each do |user| %>
+        <%= h user.name %><br />
+      <% end %>
+  	</td>
+  </tr>
+<% end %>
+  <tr>
+    <td>備考</td>
+    <td><%= simple_format @site.note %></td>
+  </tr>
+</table>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/ico" />
+  <title><%= document_title %></title>
+  <%= stylesheet_link_tag 'adminiziolite_css/reset.css', :media => 'screen,projection' %>
+  <%= stylesheet_link_tag 'adminiziolite_css/main.css', :media => 'screen,projection' %>
+  <%= stylesheet_link_tag 'adminiziolite_css/2col.css', :media => 'screen,projection', :title => '2col' %>
+  <%= stylesheet_link_tag 'adminiziolite_css/1col.css', :media => 'screen,projection', :title => '1col', :rel => 'alternate stylesheet' %>
+  <%= stylesheet_link_tag 'tinytable.css' %>
+  <!--[if lte IE 6]><link rel="stylesheet" media="screen,projection" type="text/css" href="css/main-ie6.css" /><![endif]--> <!-- MSIE6 -->
+  <%= stylesheet_link_tag 'adminiziolite_css/style.css', :media => 'screen, projection' %>
+  <%= stylesheet_link_tag 'adminiziolite_css/mystyle.css', :media => 'screen, projection' %>
+  <%= javascript_include_tag "adminiziolite_js/jquery" %>
+  <%= javascript_include_tag "adminiziolite_js/switcher" %>
+  <%= javascript_include_tag "adminiziolite_js/toggle" %>
+  <%= javascript_include_tag "adminiziolite_js/ui.core" %>
+  <%= javascript_include_tag "adminiziolite_js/ui.tabs" %>
+  <%= javascript_include_tag "jquery.tablesorter" %>
+  <%= javascript_include_tag "jquery.tinytable" %>
+  <script type="text/javascript" id="js">
+    $(document).ready(function(){ 
+      $("#sorter").tablesorter(); 
+    }); 
+    $(document).ready(function(){
+      $(".tabs > ul").tabs();
+    });
+  </script>
+</head>
+<body>
+<% # ログインしていない場合 %>
+<% if !current_user %>
+<div id="login">
+  <%= yield %>
+</div>
+
+<% # ログインしている場合 %>
+<% else %>
+<div id="main">
+  <%= render :partial => 'shared/header' %>
+  <div id="cols" class="box">
+    <%= render :partial => 'shared/sidebar' %>
+    <div id="content" class="box">
+      <%= yield %>
+    </div>
+  </div> <!-- /cols -->
+  <%= render :partial => 'shared/footer' %>
+</div> <!-- /main -->
+<% end %>
+</body>
+</html>

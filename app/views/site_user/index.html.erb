@@ -1,0 +1,16 @@
+<h1>サイトと対応者</h1>
+
+<table class="list">
+  <tr>
+    <th>サイト名</th>
+    <th>詳細</th>
+    <th>編集</th>
+  </tr>
+  <% @sites.each_with_index do |site, i| %>
+    <% content_tag(:tr, :class => i.even? ? 'even' : 'odd') do %>
+      <%= content_tag :td, h(site.site_name) %>
+      <%= content_tag :td, link_to('詳細', :action => 'show', :id => site.id ) %>
+      <%= content_tag :td, link_to('編集', :action => 'edit', :id => site.id ) %>
+    <% end %>
+  <% end %>
+</table>

@@ -1,0 +1,26 @@
+<h1>サイト担当者</h1>
+
+<% form_for @site ,:url => {:action => "update" , :id => params[:id] } do |f| %>
+<fieldset>
+<legend>担当者編集</legend>
+  <table class="nostyle">
+    <tr>
+      <td style="width:100px;">サイト名</td>
+      <td style="width:200px;"><%= h @site.site_name %></td>
+    </tr>
+    <tr>
+      <td>ユーザ一覧</td>
+      <td>
+        <% @users.each do |user| %>
+          <%= check_box_tag("users[]", user.id, (true if @user_ids.include?(user.id)) ) %>
+          <%= h user.name %><br />
+        <% end %>
+      </td>
+    </tr>
+  </table>
+  
+  <p class="buttons">
+    <%= link_to 'キャンセル', :sites %><span style="float:right;"><%= f.submit '保存' %></span>
+  </p>
+</fieldset>
+<% end %>

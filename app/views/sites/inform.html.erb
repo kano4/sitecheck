@@ -1,0 +1,4 @@
+<h1>監視サイト</h1>
+<h2>サイト登録完了</h2>
+<%= h @site.site_name %>の管理ユーザを忘れずに追加してください。<br />
+>> <%= link_to @site.site_name + ' の担当ユーザを登録' , :controller => :site_user, :action => 'edit', :id => @site.id %>

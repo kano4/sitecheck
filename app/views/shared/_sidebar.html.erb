@@ -1,0 +1,26 @@
+		<!-- Aside (Left Column) -->
+		<div id="aside" class="box">
+			<div class="padding box">
+				<!-- Logo (Max. width = 200px) -->
+<!--
+<p id="logo"><a href="#"><img src="tmp/logo.gif" alt="Our logo" title="Visit Site" /></a></p>
+-->
+			</div> <!-- /padding -->
+
+			<ul class="box">
+	  		<li <% if params[:controller] == "top" %> id="submenu-active" <% end %>><%= link_to '<span>ダッシュボード</span>', :root %></li>
+	  		<li <% if params[:controller] == "sites" %> id="submenu-active" <% end %>><%= link_to '<span>監視サイト</span>', :sites %></li>
+	  		<li <% if params[:controller] == "users" %> id="submenu-active" <% end %>><%= link_to '<span>ユーザ</span>', :users %></li>
+	  		<li <% if params[:controller] == "logs" %> id="submenu-active" <% end %>><%= link_to '<span>ログ</span>', :logs %></li>
+			  <% if current_user.usertype == 'admin' %>
+	     		<li <% if params[:controller] == "configs" %> id="submenu-active" <% end %>><%= link_to '<span>設定</span>', :configs %></li>
+	  				<ul>
+	            <li><%= link_to 'グループ', :groups %></li>
+	            <li><%= link_to '部署', :departments %></li>
+	  				</ul>
+        <% end %>
+        </li>
+			</ul>
+		</div> <!-- /aside -->
+
+

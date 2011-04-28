@@ -1,0 +1,19 @@
+<h1>サイト監視</h1>
+<div id="login_menu">
+
+<% # ログインフォーム %>
+<% form_for @user_session do |f| %>
+
+	<p class="msg warning">ユーザ名もしくはパスワードが間違っています。</p>
+  <p>
+    <%= f.label 'ユーザ名' %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label 'パスワード' %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p><%= f.submit 'ログイン' %></p>
+<% end %>
+</div>
+

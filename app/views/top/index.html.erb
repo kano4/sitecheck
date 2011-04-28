@@ -1,0 +1,84 @@
+<% # ログインしていない場合 %>
+<% if !current_user %>
+<h1>サイト監視</h1>
+<div id="login_menu">
+
+<% # ログインフォーム %>
+<% form_for @user_session do |f| %>
+  <p>
+    <%= f.label 'ユーザＩＤ' %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label 'パスワード' %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p><%= f.submit 'ログイン' %></p>
+<% end %>
+</div>
+
+<% # ログインしている場合 %>
+<% else %>
+<h1>ダッシュボード</h1>
+
+  <h2>サマリー</h2>
+  <table id="summary">
+  <thead>
+    <tr>
+      <th>ステータス異常</th>
+      <th>最終チェック日時</th>
+      <th>監視対象サイト</th>
+      <th>処理時間</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @status_sites.length %></td>
+      <td><%= @last_check_sites[0].last_check != nil ? @last_check_sites[0].last_check.strftime("%Y/%m/%d %H:%M:%S") : "unknown" %></td>
+      <td><%= @last_check_sites.length %></td>
+      <td><%= @last_check_sites[0].last_check != nil ? @last_check_sites[@last_check_sites.length - 1].last_check - @last_check_sites[0].last_check : "unknown" %> sec</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <h2>ドメイン有効期間30日以内</h2>
+  <table id="domainlist">
+  <thead>
+    <tr>
+      <th>ドメイン</th>
+      <th>有効期限</th>
+      <th>グループ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @domain_sites.each_with_index do |site, i| %>
+      <tr>
+        <td><%= link_to("#{site.domain_name}", site) %></td>
+        <td><%= h site.domain_deadline.strftime("%Y/%m/%d") %></td>
+        <td><%= h site.group %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+
+  <h2>SSL有効期限30日以内</h2>
+  <table id="ssllist">
+  <thead>
+    <tr>
+      <th>ドメイン</th>
+      <th>有効期限</th>
+      <th>グループ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ssl_sites.each_with_index do |site, i| %>
+      <tr>
+        <td><%= link_to("#{site.ssl_check_name}", site) %></td>
+        <td><%= h site.ssl_deadline.strftime("%Y/%m/%d") %></td>
+        <td><%= h site.group %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+<% end %>
+

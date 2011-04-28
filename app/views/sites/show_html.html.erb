@@ -1,0 +1,28 @@
+<h2>htmlコードの表示</h2>
+
+<div id="main">
+	<table class="attributes">
+	  <tr>
+	    <th>サイト名</th>
+	    <td><%= h @site.site_name %></td>
+	  </tr>
+	  <tr>
+	    <th>URL（トップページ）</th>
+	    <td><%= h @site.site_url %></td>
+	  </tr>
+	  <tr>
+	    <th>URL（チェック先）</th>
+	    <td><%= h @site.check_url %></td>
+	  </tr>
+  <tr>
+    <th>サイト一覧</th>
+    <td>
+    </td>
+  </tr>
+	</table>
+	
+	<div>
+	<%= h Base64.decode64(@site.check_html) %>
+	</div>
+
+</div>

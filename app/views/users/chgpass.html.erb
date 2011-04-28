@@ -1,0 +1,21 @@
+<h1>ユーザ</h1>
+<h2>パスワードの変更</h2>
+
+<% form_for @user, :url => 'update_chgpass' do |f| %>
+<%= f.error_messages %>
+	<table class="attributes">
+		</tr>
+		<tr>
+			<td>新規パスワード</td>
+			<td><%= f.password_field :password %></td>
+		</tr>
+		<tr>
+			<td>新規パスワード(確認)</td>
+			<td><%= f.password_field :password_confirmation %></td>
+		</tr>
+	</table>
+
+	<div class="submit">
+  	<%= f.submit '変更' %>
+	</div>
+<% end %>

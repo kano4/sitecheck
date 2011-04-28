@@ -1,0 +1,22 @@
+<h1>グループ</h1>
+<h2>グループ詳細</h2>
+<table class="attributes">
+  <tr>
+    <td>グループ名</td>
+    <td><%= h @group.name %></td>
+  </tr>
+  <tr>
+    <td>管理サイト</td>
+    <td>
+      <% @sites.each do |site| %>
+        <%= h site.site_name %><br />
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td>備考</td>
+    <td><%= simple_format @group.note %></td>
+  </tr>
+</table>
+
+<%= link_to 'グループ一覧に戻る', :groups %>

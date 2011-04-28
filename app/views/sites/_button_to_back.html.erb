@@ -1,0 +1,4 @@
+<% form_for(@site, :url => @site.new_record? ? [:new, :site ] : [:edit, @site] ) do |f| %>
+  <% [ :site_name, :site_url, :check_url, :site_status, :domain_name, :domain_deadline, :ssl_valid, :ssl_deadline, :created_date, :updated_date, :manager, :group, :note ].each do |f| %>
+  <% end %>
+<% end %>

@@ -1,0 +1,96 @@
+<h1>監視サイト</h1>
+
+<% if current_user.usertype == 'admin' %>
+	<p id="btn-create" class="box"><%= link_to '<span>新規サイトの追加</span>', :action => :new %></p>
+<% end %>
+
+<table id="table" class="sortable">
+<thead>
+	<tr>
+		<th><h3>ID</h3></th>
+		<th width="170"><h3>サイト名</h3></th>
+		<th><h3>ステータス</h3></th>
+		<th><h3>ドメイン期限</h3></th>
+		<th><h3>SSL期限</h3></th>
+		<th><h3>更新日</h3></th>
+		<th><h3>最終チェック日時</h3></th>
+		<th class="nosort"><h3>詳細</h3></th>
+		<% if current_user && current_user.usertype == 'admin' %>
+			<th class="nosort"><h3>編集</h3></th>
+			<th class="nosort"><h3>担当者</h3></th>
+			<th class="nosort"><h3>削除</h3></th>
+		<% end %>
+	</tr>
+</thead>
+<tbody>
+	<% @sites.each_with_index do |site, i| %>
+    <% content_tag(:tr, :class => i.even? ? 'even' : 'odd') do %>
+      <%= content_tag :td, i+1 %>
+      <%= content_tag :td, h(site.site_name) %>
+
+			<% if site.check_status != 'ok' && site.check_status != 'URL未登録' && site.check_status != 'メンテナンス中' && site.check_status != '新規登録' %>
+      	<%= content_tag :td, "<span class='alert'>" + h(site.check_status) + "</span>" %>
+			<% else %>
+      	<%= content_tag :td, h(site.check_status) %>
+			<% end %>
+
+			<% if site.domain_deadline != nil && site.domain_deadline < Date.today + 30 %>
+				<%= content_tag :td, site.domain_deadline != nil ? "<span class='alert'>" + site.domain_deadline.strftime("%Y/%m/%d") + "</span>" : "" %>
+			<% else %>
+				<%= content_tag :td, site.domain_deadline != nil ? site.domain_deadline.strftime("%Y/%m/%d") : "" %>
+			<% end %>
+
+			<% if site.ssl_deadline != nil && site.ssl_deadline < Date.today + 30 %>
+	      <%= content_tag :td, site.ssl_deadline != nil ? "<span class='alert'>" + site.ssl_deadline.strftime("%Y/%m/%d") + "</span>" : "" %>
+			<% else %>
+	      <%= content_tag :td, site.ssl_deadline != nil ? site.ssl_deadline.strftime("%Y/%m/%d") : "" %>
+			<% end %>
+      <%= content_tag :td, site.updated_date.strftime("%Y/%m/%d") %>
+      <%= content_tag :td, site.last_check != nil ? site.last_check.strftime("%Y/%m/%d %H:%M:%S") : "" %>
+      <%= content_tag :td, link_to('詳細', site) %>
+
+			<% if current_user && current_user.usertype == 'admin' %>
+      <%= content_tag :td, link_to('編集', [ :edit, site ]) %>
+      <%= content_tag :td, link_to('編集', :controller => :site_user, :action => 'edit', :id => site.id ) %>
+      <%= content_tag :td, link_to('削除', site, :method => :delete, :confirm => '本当に削除しますか？') %>
+			<% end %>
+
+    <% end %>
+  <% end %>
+</tbody>
+</table>
+
+<div id="controls">
+	<div id="perpage">
+		<select onchange="sorter.size(this.value)">
+		<option value="5">5</option>
+			<option value="10" selected="selected">10</option>
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select>
+		<span>ページあたりの件数</span>
+	</div>
+	<div id="navigation">
+		<%= link_to_function(image_tag("tinytable_img/first.gif", :alt => "先頭ページ"), "sorter.move(-1,true)") %>
+		<%= link_to_function(image_tag("tinytable_img/previous.gif", :alt => "前のページ"), "sorter.move(-1)") %>
+		<%= link_to_function(image_tag("tinytable_img/next.gif", :alt => "次のページ"), "sorter.move(1)") %>
+		<%= link_to_function(image_tag("tinytable_img/last.gif", :alt => "最終ページ"), "sorter.move(1,true)") %>
+	</div>
+	<div id="text"><span id="pagelimit"></span>ページ中 <span id="currentpage"></span>ページ目を表示</div>
+</div>
+
+<script type="text/javascript">
+	var sorter = new TINY.table.sorter("sorter");
+	sorter.head = "head";
+	sorter.asc = "asc";
+	sorter.desc = "desc";
+	sorter.even = "evenrow";
+	sorter.odd = "oddrow";
+	sorter.evensel = "evenselected";
+	sorter.oddsel = "oddselected";
+	sorter.paginate = true;
+	sorter.currentid = "currentpage";
+	sorter.limitid = "pagelimit";
+	sorter.init("table",3);
+</script>

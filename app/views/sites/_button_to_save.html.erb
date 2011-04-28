@@ -1,0 +1,6 @@
+<% form_for(@site) do |f| %>
+  <% [ :site_name, :site_url, :check_url, :site_status, :domain_name, :domain_deadline, :ssl_valid, :ssl_check_name, :ssl_deadline, :created_date, :updated_date, :manager, :group, :note ].each do |attr| %>
+    <%= f.hidden_field attr %>
+  <% end %>
+  <%= f.submit '保存' %>
+<% end %>

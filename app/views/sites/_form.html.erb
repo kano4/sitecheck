@@ -1,0 +1,60 @@
+<table class="nostyle">
+  <tr>
+    <td style="width:150px;">サイト名</td>
+    <td><%= f.text_field :site_name %></td>
+  </tr>
+  <tr>
+    <td>URL（トップページ）</td>
+    <td><%= f.text_field :site_url %></td>
+  </tr>
+  <tr>
+    <td>URL（チェック先）</td>
+    <td><%= f.text_field :check_url %></td>
+  </tr>
+  <tr>
+    <td>ドメイン名</td>
+    <td><%= f.text_field :domain_name %></td>
+  </tr>
+  <tr>
+    <td>ステータス</td>
+    <td>
+      <%= f.radio_button :site_status, 'メンテナンス中' %>メンテナンス中
+      <%= f.radio_button :site_status, '運用中' %>運用中
+      <%= f.radio_button :site_status, '終了' %>終了
+    </td>
+  </tr>
+  <tr>
+    <td>SSL有無</td>
+    <td>
+      <%= f.radio_button :ssl_valid, false%>無効
+      <%= f.radio_button :ssl_valid, true %>有効
+    </td>
+  </tr>
+  <tr>
+    <td>SSL管理ドメイン名</td>
+    <td><%= f.text_field :ssl_check_name %></td>
+  </tr>
+  <tr>
+    <td>管理部署</td>
+    <td>
+      <%= f.select(:manager, Department.find(:all).map{|g| [g.name]}) %>
+    </td>
+  </tr>
+  <tr>
+    <td>グループ</td>
+    <td>
+      <%= f.select(:group, Group.find(:all).map{|g| [g.name]}) %>
+    </td>
+  </tr>
+  <tr>
+    <td>備考</td>
+    <td><%= f.text_area :note, :size => '40x5' %></td>
+  </tr>
+	<tr>
+		<td colspan="2"><%= link_to 'キャンセル', :sites %><span style="float:right"><%= f.submit '次へ' %></span></td>
+	</tr>
+</table>
+
+<%= f.hidden_field :created_date, {:value => @c_date} %>
+<%= f.hidden_field :updated_date, {:value => Time.now} %>
+

@@ -1,0 +1,9 @@
+<%= @user_name %>さん。( <%= @user_email %> )
+
+date: <%= @date %>
+status: <%= @site_status %>
+site name: <%= @site_name %>
+check url: <%= @check_url %>
+webimage: http://10.0.1.28/webimage/images/<%= @site_id.to_s[0, 1] %>/<%= @site_id.to_s[1, 1] %>/<%= @site_id %>.png
+
+<%= @diff_html %>

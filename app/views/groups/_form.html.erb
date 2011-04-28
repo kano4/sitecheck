@@ -1,0 +1,17 @@
+<% form_for @group do |f| %>
+<%= f.error_messages %>
+<table class="attributes">
+  <tr>
+    <td>グループ名</td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td>備考</td>
+    <td><%= f.text_area :note, :size => '40x5' %></td>
+  </tr>
+</table>
+
+<div class="submit">
+  <%= f.submit f.object.new_record? ? '追加' : '保存' %>
+</div>
+<% end %>
